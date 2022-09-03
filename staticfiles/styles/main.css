@@ -1,0 +1,202 @@
+h1{
+    color:rgb(78, 183, 92)
+}
+
+
+body{
+    background-color:aliceblue;
+    text-decoration:none;
+}
+.column{
+  display:grid;
+  grid-template-columns:3fr 3fr 3fr;
+}
+
+
+img.project__thumbnail{
+    width:100px;
+    height:100px;
+    border-radius:30px;
+    
+}
+
+.card{
+    border-style:double;
+    margin:15px;
+    padding:15px;
+    border-radius:10px
+}
+h3.project__title{
+  
+  font-size:17px;
+  color:rgba(85, 82, 82, 0.918);
+  text-decoration: none;
+  
+}
+h3.project__title:hover{
+  color:rgb(173, 103, 158);
+}
+h3.project__description{
+  
+  color:rgba(85, 82, 82, 0.918);
+  text-decoration: none;
+}
+h3.project__owner{
+  color:rgba(85, 82, 82, 0.918);
+}
+h3.project__owner:hover{
+  color:rgb(173, 103, 158);
+}
+a.createbtn{
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+/*navbar*/
+.navbar {
+    overflow: hidden;
+    background-color: rgb(79, 76, 104);
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(173, 103, 158);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* project template */
+
+  img.p__image {
+    width:650px;
+    height:auto;
+    border-radius:10px;
+    margin: 20px;
+}
+
+p.p__title{
+    color: rgb(74, 74, 115);
+  }
+p.p__description{
+  font-size: 20px;
+  margin-top:30px;
+  color:rgb(63, 60, 60);
+}
+/* .project__card{
+    width: 40%;
+    height: 500px;
+    display: grid;
+    grid-template-columns:1fr 3fr;
+    border-style: groove;
+    padding: 10px;
+  } */
+.project__card2{
+  width: 46%;
+  height:auto;
+  padding: 10px;
+  /* border-style: groove; */
+  float:right;
+}
+.img__div1{
+  /* border-style: groove; */
+  height: 500px;
+  width: 50%;
+  padding: 10px;
+}
+.tag__class{
+  /* border-style: groove; */
+  width: 50%;
+  height: 150px;
+  padding: 20px;
+ 
+  
+}
+h2.tag__des{
+  margin-left: 20px;
+  color:rgb(74, 72, 69);
+}
+p.tags{
+  background-color: #ddd;
+  display: inline;
+  margin-left: 10px;
+  padding-left: 10px;
+  border: none;
+  color: rgb(77, 66, 66);
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  padding: auto;
+  margin: 4px 2px;
+  float:left;
+  border-radius: 16px;
+}
+
+img.avatar{
+  width: 200px;
+  height: auto;
+}

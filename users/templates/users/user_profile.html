@@ -1,0 +1,34 @@
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+    <div class="project_container">
+        <h1>User Profile Templates</h1>
+        <p class="p__title"><b>name:</b>{{profile.name}}</p>
+        <p class="p__title"><b>short introduction:</b>{{profile.short_intro}}</p>
+
+        <div class="project__card2">
+            <p class="p__description"><b>bio:</b>{{profile.bio}}</p>
+        </div>
+        
+        <div class="img__div1">
+            <img class="p__image" src="{{profile.profile_image.url}}"/>
+            
+        </div>
+
+        
+            
+        
+
+        <div class="tag__class">
+            <h2 class="tag__des">skills:</h2><br>
+            {%for skill in topskills%}
+                <p class="tags">{{skill.name}}</p>
+            {%endfor%}
+            {%for skill in otherskills%}
+                <p class="tags">{{skill.name}}</p>
+            {%endfor%}<br><br><br><br><br>
+            {% if request.user.profile.id != profile.id %}
+                <button class="account__btn"><a class="skill__link" href="{%url 'create-message' profile.id %}">Messages</button>
+            {%endif%}
+        </div> 
+{%endblock content%}

@@ -1,0 +1,65 @@
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+
+    <h1>Account Template</h1>
+    <button class="account__btn">
+        <a class="skill__link" href="{%url 'createproject'%}">add project</a>
+    </button>
+    <button class="account__btn">
+        <a class="skill__link" href="{%url 'editaccount'%}"">Edit</a>
+    </button>
+    <br><br>
+    
+    <div class="account__container">
+        <div class="account__profile">
+            <img class="account__thumbnail" src="{{profile.profile_image.url}}"><br>
+            name:&nbsp;&nbsp;{{profile.name}}<br><br>
+            bio:&nbsp;&nbsp;{{profile.bio}}<br>
+        </div>
+    
+    
+        <div class="account__skill">
+            <button class="account__btn2">
+                <a class="skill__link" href="{%url 'create-skill'%}">create skill</a><br>
+            </button><br><br><br>
+            <h3 class="account_skill_text">
+                Skills
+            </h3>
+            {%for skill in skills%}
+                <div>
+                    skill:&nbsp;&nbsp;{{skill.name}}<br>
+                description:&nbsp;&nbsp;{{skill.description}}
+                </div>
+                <button class="account__btn">
+                    <a class="skill__link" href="{% url 'update-skill' skill.id %}">update skill&nbsp;&nbsp;</a>
+                </button>
+
+                <button class="account__btn">
+                    <a class="skill__link" href="{% url 'delete-skill' skill.id %}">delete skill&nbsp;&nbsp;</a>
+                </button>
+                
+                
+    
+            {%endfor%}
+            <br><br>
+        </div>
+    </div>
+    
+    <div class="account__project">
+        <h2>projects</h2>
+        {%for project in projects%}
+            <h3 class="title__account">title:{{project.title}}</h3> 
+            <h3 class="title__account">owner:{{project.owner}}</h3> 
+            <h3 class="title__account">tags:{{project.tags}}</h3> 
+            <h3 class="title__account">des:{{project.description}}</h3> 
+            <h3 class="title__account">{{project.created_time}}</h3> 
+            <br>
+            <img class= "account_project_image"  src="{{project.project_image.url}}"><br><br><br><br><hr>
+        {%endfor%}
+    </div>
+    
+   
+    
+
+{%endblock content%}

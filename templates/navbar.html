@@ -1,0 +1,14 @@
+{%load static%}
+<div class="navbar">
+
+      {%if request.user.is_authenticated %}
+        <a href="{%url 'useraccount' %}">Account</a>
+        <a href="{%url 'projects'%}">projects</a>
+        <a href="{%url 'logoutpage' %}">logout</a>
+        <a href="{%url 'inbox' %}">inbox</a>
+      {%else%}
+        <a href="{%url 'loginpage' %}">login</a>
+      {%endif%}
+
+      
+    </div>

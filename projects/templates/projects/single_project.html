@@ -1,0 +1,39 @@
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+    <div class="project_container">
+        <button class="account__btn">
+            <a class="skill__link" href="{%url 'updateproject' project.id%}"">Edit project</a>
+        </button>
+        <button class="account__btn">
+            <a class="skill__link" href="{%url 'deleteproject' project.id%}"">Delete project</a>
+        </button>
+        
+        <h1>Single Project Templates</h1>
+        <p class="p__title">{{project.title}}</p>
+
+        <div class="project__card2">
+            <p class="p__description">{{project.description}}</p>
+        </div>
+        
+        <div class="img__div1">
+            <img class="p__image" src="{{project.project_image.url}}"/>
+        </div>
+
+        
+
+        <div class="tag__class">
+            <h2 class="tag__des">used tags</h2><br>
+            {%for tag in tags%}
+                <p class="tags">{{tag}}</p>
+            {%endfor%}
+        </div> 
+            
+        
+        
+        
+
+        
+    
+    </div>
+{%endblock content%}

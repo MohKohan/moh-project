@@ -1,0 +1,51 @@
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+<h1>Profile Template</h1>
+<br>
+<section class="hero-section text-center">
+    <div class="container container--narrow">
+        
+
+        <div class="hero-section__search">
+
+            <form id="searchForm" class="form" action="{% url 'profiles' %}" method="get">
+                <div class="form__field">
+                    
+                    <input class="search__project" type="text" name="search_query"
+                        value="{{search_query}}" placeholder="Search by developer name" />
+                </div>
+
+                <input class="project__btn" type="submit" value="Search" />
+            </form>
+
+        </div>
+    </div>
+</section>
+<div class="column">
+    {%for profile in profiles%}
+
+        <div class="card">
+            <a style="text-decoration:none" href="{%url 'userprofile' profile.id %}" class="project">
+                <img class="project__thumbnail" src="{{profile.profile_image.url}}" >
+                <h3 class="project__title"><b>username:</b> {{profile.username}}</h3>
+                <h3 class="project__owner"><b>short_intro</b>{{profile.short_intro}}</h3>
+                <h3 class="project__description"><b> bio:</b> {{profile.bio|slice:100}}</h3>
+                {%for skill in profile.skill_set.all%}
+                    <h3 class="project__description">{{skill}}</h3>
+                {%endfor%}
+            </a>
+        </div>
+        
+    {%endfor%}
+        
+</div>
+        
+    
+    
+    
+
+    
+
+</div>
+{%endblock content%}
